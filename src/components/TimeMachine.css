@@ -3,18 +3,19 @@
 
 body {
     background: radial-gradient(#13022e, #753a88);
-    background-size: 100% 100%;
-    background-attachment: scroll;
+    background-size: cover;
+    background-attachment: fixed;
     color: #fff;
     font-family: 'Press Start 2P', cursive;
     margin: 0;
     padding: 0;
-    min-height: 100vh;
-    overflow-x: hidden;
   }
 
-html, body {
+  html, body {
     width: 100%;
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
   
 meta[name="viewport"] {
@@ -87,6 +88,7 @@ meta[name="viewport"] {
     gap: 16px;
     justify-content: center;
     max-width: 100%;
+    overflow-x: hidden;
 }
   
   .card {
