@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-
 body {
-    background: radial-gradient(135deg, #2b1055, #753a88);
+    background: radial-gradient(#2b1055, #753a88);
     background-size: cover;
     background-attachment: fixed;
     color: #fff;
