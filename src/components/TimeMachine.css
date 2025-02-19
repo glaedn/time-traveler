@@ -17,10 +17,6 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
 }
-  
-meta[name="viewport"] {
-    content: "width=device-width, initial-scale=1, maximum-scale=3, user-scalable=yes";
-}
 
   .card-game {
     max-width: 100%;
@@ -35,6 +31,8 @@ meta[name="viewport"] {
     text-transform: uppercase;
     color: #ff0099;
     text-shadow: 0 0 8px #ff0099, 0 0 16px #00ffff;
+    max-width: 90vw;
+    word-break: break-word;
   }
   
   .input-form {
@@ -83,7 +81,7 @@ meta[name="viewport"] {
   }
   
   .cards-container {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 16px;
     justify-content: center;
@@ -100,7 +98,8 @@ meta[name="viewport"] {
     cursor: pointer;
     font-weight: bold;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease;
-    max-width: 100%;
+    flex: 1 1 150px;
+    max-width: 90%;
     box-sizing: border-box;
   }
   

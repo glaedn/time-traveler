@@ -98,7 +98,10 @@ options based on their starting date.
   };
 
   return (
+    
     <div className="card-game">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    </meta>
       <h1>Time Traveler</h1>
       <form onSubmit={(e) => handleStory("New Story.", e)} className="input-form">
         <label>
