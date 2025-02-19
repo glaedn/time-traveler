@@ -13,6 +13,11 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
   }
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
   
   .card-game {
     max-width: 100%;
