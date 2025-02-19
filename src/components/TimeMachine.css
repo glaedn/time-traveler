@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
+
 body {
     background: radial-gradient(#2b1055, #753a88);
     background-size: cover;
@@ -32,6 +33,10 @@ body {
     flex-direction: column;
     gap: 16px;
     margin-bottom: 24px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px #ff00ff;
   }
   
   .input-form label {
