@@ -124,7 +124,7 @@ strong {
 
 
 body {
-    background: linear-gradient(135deg, #2b1055, #753a88, #ff0099);
+    background: radial-gradient(135deg, #2b1055, #753a88);
     background-size: cover;
     background-attachment: fixed;
     color: #fff;
