@@ -26,30 +26,32 @@ function CardGame() {
     if (e) e.preventDefault(); // Prevent form submission from reloading the page
 
     const prompt = `
-You are the narrator for an interactive time travel story. This is a ${tripType} to the year ${targetDate} from the year ${startDate}. 
-The user's name is ${protagonist}, their gender is ${gender} and their opposition is ${antagonist}. 
+You are the narrator for an interactive time travel story. This is a ${subgenre} ${tripType} to the year ${targetDate} from the year ${startDate}. 
+The user's name is ${protagonist}, their gender is ${gender} and their opposition is ${antagonist || "None"}. 
 
 This is the story so far: ${storyline}
 THe user selected: "${selectedText}" as their last response.
 
 Replies should use this exact format:
 
-(New Story text goes here, markdown formatting encouraged, don't actually wrap it in parentheses)
+New Story text goes here, markdown formatting encouraged
 
-|| (Careful action)
-|| (Bold action)
-|| (Comedic action)
-|| (Reckless action)
-|| (Passive action)
-|| (Evil action)
+|| Careful action
+|| Bold action
+|| Comedic action
+|| Reckless action
+|| Passive action
+|| Evil action
 
-|| (Story summary goes here. Format the summary like this:
+|| Story summary goes here. Format the summary like this:
 Key items: (Item)-(purpose)
 Key Characters: (Name)-(plot relevance)
 Past plot: (plot so far)
 Current arc: (what is the user doing now)
 Future plans: (your story plans)
 Current date and time: (date and time)
+
+
 Please remember to include || delimiters between each section of the response. Don't forget the summary at the end!
 
 User inputs:
@@ -97,7 +99,7 @@ options based on their starting date.
 
   return (
     <div className="card-game">
-      <h1>StoryCard MAgIc</h1>
+      <h1>Time Traveler</h1>
       <form onSubmit={(e) => handleStory("New Story.", e)} className="input-form">
         <label>
           Protagonist Name:
