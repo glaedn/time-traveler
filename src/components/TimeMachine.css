@@ -3,8 +3,8 @@
 
 body {
     background: radial-gradient(#2b1055, #753a88);
-    background-size: cover;
-    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-attachment: scroll;
     color: #fff;
     font-family: 'Press Start 2P', cursive;
     margin: 0;
