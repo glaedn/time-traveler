@@ -102,7 +102,7 @@ options based on their starting date.
       <h1>Time Traveler</h1>
       <form onSubmit={(e) => handleStory("New Story.", e)} className="input-form">
         <label>
-          Protagonist Name:
+          Your Name:
           <input
             type="text"
             value={protagonist}
