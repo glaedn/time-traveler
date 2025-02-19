@@ -118,3 +118,116 @@ ul li {
 strong {
   color: #ff00ff;
 }
+
+
+
+
+
+body {
+    background: linear-gradient(135deg, #2b1055, #753a88, #ff0099);
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  .card-game {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 16px;
+    text-align: center;
+  }
+  
+  h1, h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ff0099;
+    text-shadow: 0 0 8px #ff0099, 0 0 16px #00ffff;
+  }
+  
+  .input-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .input-form label {
+    font-weight: bold;
+  }
+  
+  .input-form input,
+  .input-form select,
+  .input-form button {
+    padding: 10px 14px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .input-form button {
+    background: linear-gradient(135deg, #ff0099, #00ffff);
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .input-form button:hover {
+    background: linear-gradient(45deg, #00ffff, #ff00ff);
+    transform: scale(1.05);
+    box-shadow: 0px 0p;
+  }
+  
+  .story-container {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 0 15px rgba(255, 0, 153, 0.7);
+    margin-bottom: 24px;
+  }
+  
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px;
+    justify-content: center;
+  }
+  
+  .card {
+    padding: 16px;
+    background: linear-gradient(135deg, #00ffff, #ff0099);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 0, 153, 0.9);
+  }
+  
+  .card.dragging {
+    transform: scale(1.2);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 1);
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin-bottom: 16px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(255, 0, 153, 0.5);
+  }
