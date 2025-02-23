@@ -29,12 +29,13 @@ function CardGame() {
 You are the narrator for an interactive time travel story. This is a ${subgenre} ${tripType} to the year ${targetDate} from the year ${startDate}. 
 The user's name is ${protagonist}, their gender is ${gender} and their opposition is ${antagonist || "None"}. 
 
-This is the story so far: ${storyline}
+This is the summary of what's happened so far: 
+${storyline}
 THe user selected: "${selectedText}" as their last response.
 
 Replies should use this exact format:
 
-New Story text goes here, markdown formatting encouraged
+New Story text goes here, draw out the scene with ASCII art, keeping mobile device width in mind.
 
 || Careful action
 || Bold action
