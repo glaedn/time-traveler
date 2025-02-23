@@ -35,7 +35,7 @@ THe user selected: "${selectedText}" as their last response.
 
 Replies should use this exact format:
 
-New Story text goes here, draw out the scene with ASCII art, keeping mobile device width in mind.
+New Story text goes here, draw out the scene with ASCII art, keeping mobile device width in mind NEVER Draw with two ||.
 
 || Careful action
 || Bold action
