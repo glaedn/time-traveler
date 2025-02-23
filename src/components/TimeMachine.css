@@ -78,6 +78,7 @@ body {
     padding: 16px;
     box-shadow: 0 0 15px rgba(255, 0, 153, 0.7);
     margin-bottom: 24px;
+    max-width: 90%;
   }
   
   .cards-container {
