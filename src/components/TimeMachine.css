@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-
 body {
     background: radial-gradient(#13022e, #753a88);
     background-size: cover;
@@ -9,33 +8,36 @@ body {
     font-family: 'Press Start 2P', cursive;
     margin: 0;
     padding: 0;
-  }
-
-  html, body {
-    width: 100%;
-    min-width: 100vw;
-    min-height: 100vh;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-  .card-game {
+html, body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden; /* Ensure no horizontal overflow */
+}
+
+.card-game {
     max-width: 100%;
     margin: 0 auto;
     padding: 16px;
     text-align: center;
     overflow-wrap: break-word;
-  }
-  
-  h1, h2 {
+    box-sizing: border-box; /* Ensure padding doesn't affect layout */
+}
+
+h1, h2 {
     font-weight: bold;
     text-transform: uppercase;
     color: #ff0099;
     text-shadow: 0 0 8px #ff0099, 0 0 16px #00ffff;
     max-width: 90vw;
     word-break: break-word;
-  }
-  
-  .input-form {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+    margin: 10px 0;
+}
+
+.input-form {
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -44,53 +46,59 @@ body {
     padding: 16px;
     border-radius: 8px;
     box-shadow: 0px 0px 15px #ff00ff;
-  }
-  
-  .input-form label {
+    box-sizing: border-box;
+}
+
+.input-form label {
     font-weight: bold;
-  }
-  
-  .input-form input,
-  .input-form select,
-  .input-form button {
+    font-size: 1rem; /* Smaller font size for labels */
+}
+
+.input-form input,
+.input-form select,
+.input-form button {
     padding: 10px 14px;
-    font-size: 16px;
+    font-size: 1rem; /* Adjust font size for inputs */
     border: none;
     border-radius: 4px;
-  }
-  
-  .input-form button {
+    box-sizing: border-box;
+}
+
+.input-form button {
     background: linear-gradient(135deg, #ff0099, #00ffff);
     color: white;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
-  }
-  
-  .input-form button:hover {
+    font-size: 1rem; /* Adjust font size for buttons */
+}
+
+.input-form button:hover {
     background: linear-gradient(45deg, #00ffff, #ff00ff);
     transform: scale(1.05);
-    box-shadow: 0px 0p;
-  }
-  
-  .story-container {
+    box-shadow: 0px 0px 10px #ff00ff;
+}
+
+.story-container {
     background: rgba(0, 0, 0, 0.6);
     border-radius: 8px;
     padding: 16px;
     box-shadow: 0 0 15px rgba(255, 0, 153, 0.7);
     margin-bottom: 24px;
-    max-width: 90%;
-  }
-  
-  .cards-container {
+    max-width: 90vw; /* Ensure it fits within the viewport */
+    overflow-wrap: break-word; /* Break long words to prevent overflow */
+    box-sizing: border-box;
+}
+
+.cards-container {
     display: flex;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    flex-wrap: wrap; /* Allow cards to wrap to the next line on small screens */
     gap: 16px;
     justify-content: center;
     max-width: 100%;
     overflow-x: hidden;
 }
-  
-  .card {
+
+.card {
     padding: 16px;
     background: linear-gradient(135deg, #00ffff, #ff0099);
     border-radius: 8px;
@@ -99,30 +107,43 @@ body {
     cursor: pointer;
     font-weight: bold;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease;
-    flex: 1 1 150px;
-    max-width: 90%;
+    flex: 1 1 calc(33.333% - 32px); /* Adjust card width for smaller screens */
+    max-width: 100%; /* Ensure cards don't exceed screen width */
     box-sizing: border-box;
-  }
-  
-  .card:hover {
+    height: auto; /* Ensure cards are not too tall */
+}
+
+.card:hover {
     transform: scale(1.1);
     box-shadow: 0 0 20px rgba(255, 0, 153, 0.9);
-  }
-  
-  .card.dragging {
+}
+
+.card.dragging {
     transform: scale(1.2);
     box-shadow: 0 0 25px rgba(0, 255, 255, 1);
-  }
-  
-  ul {
+}
+
+ul {
     list-style: none;
     padding: 0;
-  }
-  
-  ul li {
+}
+
+ul li {
     margin-bottom: 16px;
     padding: 12px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(255, 0, 153, 0.5);
-  }
+    overflow-wrap: break-word; /* Break long words in conversation history */
+}
+
+.ascii-art {
+    font-family: monospace;
+    white-space: pre-wrap;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    max-width: 90vw; /* Ensure ASCII art fits within the viewport */
+    overflow-wrap: break-word; /* Break long lines in ASCII art */
+}
